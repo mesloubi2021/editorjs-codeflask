@@ -28,6 +28,10 @@
 	border-top-left-radius: 5px;
 }
 
+.editorjs-codeFlask_Wrapper .codeflask__lines {
+	z-index: 0;
+}
 .editorjs-codeFlask_Wrapper .codeflask.codeflask--has-line-numbers:before{
+	z-index: 0;
     background-color: #dcdfe6;
 }

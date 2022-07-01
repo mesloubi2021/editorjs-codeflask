@@ -278,6 +278,30 @@
      return true;
    }
 
+   /**
+   * onPaste callback fired from Editor`s core
+   *
+   * @param {PasteEvent} event - event with pasted content
+   */
+  onPaste(event) {
+    console.log(event);
+    this.data.editorInstance.updateCode(event.detail.data.innerText)
+  }
+
+  /**
+   *  Used by Editor.js paste handling API.
+   *  Provides configuration to handle CODE tag.
+   *
+   * @static
+   * @returns {{tags: string[]}}
+   */
+   static get pasteConfig() {
+    return {
+      tags: [ 'pre' ],
+    };
+  }
+
+
  
    /**
     * Icon and title for displaying at the Toolbox
